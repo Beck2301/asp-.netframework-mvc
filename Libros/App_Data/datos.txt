@@ -1,0 +1,4 @@
+<tr><td>1</td><td>12520</td><td>El amor irreal</td><td>259</td><td>Dante Books</td><td>Jose Venegas</td><td>12/09/1998</td></tr>
+<tr><td>2</td><td>234</td><td>Las buenas obras</td><td>255</td><td>Libros Marcella</td><td>Luis Armando Perez</td><td>19/03/2000</td></tr>
+<tr><td>3</td><td>62545887</td><td>Cuentos Magnificos</td><td>25</td><td>Cuentos Lbs</td><td>Jose Cañas</td><td>29/03/2019</td></tr>
+<tr><td>4</td><td>99213</td><td>Las cronicas almantes</td><td>525</td><td>Epicas Historias</td><td>Rigoberto Alcanatara</td><td>12/03/2021</td></tr>

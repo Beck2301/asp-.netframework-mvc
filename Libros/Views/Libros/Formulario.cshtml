@@ -1,0 +1,77 @@
+﻿@model Libros.Models.Datos
+@{
+    ViewBag.Title = "Formulario";
+}
+
+<h3 class="mt-5 mb-5">Formulario</h3>
+@using (Html.BeginForm("AgregarDato", "Libros", FormMethod.Post))
+{
+    //fecha
+    @Html.HiddenFor(x => x.fpublicacion)
+    //id
+    <div class="form-group">
+        <label for="exampleInputEmail1">ID:</label>
+        @Html.TextBoxFor(x => x.id, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.id, null, new { @class = "text-danger" })
+    </div>
+    //isbn
+    <div class="form-group">
+        <label for="exampleInputEmail1">ISBN:</label>
+        @Html.TextBoxFor(x => x.isbn, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.isbn, null, new { @class = "text-danger" })
+    </div>
+    //titulo
+    <div class="form-group">
+        <label for="exampleInputEmail1">Titulo:</label>
+        @Html.TextBoxFor(x => x.titulo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.titulo, null, new { @class = "text-danger" })
+    </div>
+    //npagina
+    <div class="form-group">
+        <label for="exampleInputEmail1">Numero de paginas:</label>
+        @Html.TextBoxFor(x => x.npaginas, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.npaginas, null, new { @class = "text-danger" })
+    </div>
+    //editorial
+    <div class="form-group">
+        <label for="exampleInputEmail1">Editorial</label>
+        @Html.TextBoxFor(x => x.editorial, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.editorial, null, new { @class = "text-danger" })
+    </div>
+    //autor
+    <div class="form-group">
+        <label for="exampleInputEmail1">Autor</label>
+        @Html.TextBoxFor(x => x.autor, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.autor, null, new { @class = "text-danger" })
+    </div>
+    //fecha
+    <div class="form-group">
+        <label for="exampleInputEmail1">Fecha</label>
+        <input class="form-control" type="date" id="fecha">
+        @Html.ValidationMessageFor(x => x.fpublicacion, null, new { @class = "text-danger" })
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-primary mb-5 " />
+
+}
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+
+    $(document).ready(function () {
+        $("#fecha").on("change", function () {
+
+            $("#fpublicacion").val($(this).val())
+            console.log($(this).val())
+        })
+
+
+
+
+        $("#fecha").val($("#fpublicacion").val());
+
+    })
+
+
+
+
+</script>
